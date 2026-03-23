@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import FormControllePerso from "./FormControllePerso";
+import FormNonControllePerso from "./FormNonControllePerso";
+import ConvertisseurTemp from "./ConvertisseurTemp";
+import ProfilUser from "./ProfilUser";
+import { UserContextPerso } from "./UserContextPerso";
 
 function App() {
+  const [user, setUser] = useState({
+    nom: "Oumaima",
+    isConnected: true,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextPerso.Provider value={{ user, setUser }}>
+      <div>
+        <h1>TP React - Version Personnalisée</h1>
+
+        <h2>Formulaire contrôlé</h2>
+        <FormControllePerso />
+
+        <h2>Formulaire non contrôlé</h2>
+        <FormNonControllePerso />
+
+        <h2>Gestion de température</h2>
+        <ConvertisseurTemp />
+
+        <h2>Espace utilisateur</h2>
+        <ProfilUser />
+      </div>
+    </UserContextPerso.Provider>
   );
 }
 
