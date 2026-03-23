@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# TP 5 : Découvrir la gestion de l’état et la structuration des composants React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objectif du TP
 
-## Available Scripts
+Ce TP a pour objectif de découvrir les bases de React à travers :
 
-In the project directory, you can run:
+* les formulaires contrôlés
+* les formulaires non contrôlés
+* le partage d’état entre composants
+* l’utilisation du Context React
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Création du projet
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Le projet a été créé avec les commandes suivantes :
 
-### `npm test`
+npx create-react-app tp-react-debutant
+cd tp-react-debutant
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="1917" height="982" alt="Capture d&#39;écran 2026-03-23 114858" src="https://github.com/user-attachments/assets/71158986-f517-49a9-997a-33509696db27" />
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Fonctionnalités
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1123" height="985" alt="Capture d&#39;écran 2026-03-23 120210" src="https://github.com/user-attachments/assets/eb10bf4b-642a-4103-852c-a2dae370e77e" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Formulaire contrôlé
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="1919" height="1003" alt="Capture d&#39;écran 2026-03-23 120810" src="https://github.com/user-attachments/assets/b66c197f-50c8-42b0-8134-7c6daf064bdb" />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Un formulaire contrôlé a été réalisé avec useState.
+Les champs sont liés au state et se mettent à jour à chaque saisie.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### Formulaire non contrôlé
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="1916" height="1003" alt="Capture d&#39;écran 2026-03-23 121027" src="https://github.com/user-attachments/assets/27d5cbb7-b829-4f65-8176-ebe585a99df3" />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 
+Un formulaire non contrôlé a été réalisé avec useRef.
+Les valeurs sont récupérées directement depuis les champs input.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Partager l’état entre un parent et un enfant
 
-### Analyzing the Bundle Size
+<img width="1919" height="1005" alt="Capture d&#39;écran 2026-03-23 121050" src="https://github.com/user-attachments/assets/cf353ae9-0a68-4e60-bcd7-92026d23f1f4" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Un composant permet de saisir une température.
+Le state est géré dans le composant parent et transmis à l’enfant via les props.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### Context React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img width="1919" height="994" alt="Capture d&#39;écran 2026-03-23 121105" src="https://github.com/user-attachments/assets/dd76d012-d873-4881-8b1f-f9197760685d" />
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Un contexte utilisateur a été mis en place pour partager les données globales.
+Un composant Profil permet d’afficher l’utilisateur et de gérer la déconnexion.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies utilisées
+
+* React JS
+* JavaScript
+* HTML / CSS
+* Hooks : useState, useRef, useContext
+
+---
+
+## Résultat
+
+L’application contient :
+
+* deux formulaires
+* un champ de température
+* un profil utilisateur
+
+
